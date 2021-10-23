@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: chart
-    repoURL: git@github.com/{{ .Values.spec.github.repository }}
+    repoURL: {{ .Values.spec.github.repository }}
     targetRevision: HEAD
     helm:
       - values.yaml

@@ -15,6 +15,7 @@ spec:
     repoURL: {{ .Values.spec.github.repository }}
     targetRevision: HEAD
     helm:
+      valueFile:
       - values.yaml
       - ../application1.values.yaml
     syncPolicy:

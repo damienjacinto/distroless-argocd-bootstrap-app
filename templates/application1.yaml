@@ -18,7 +18,7 @@ spec:
       valueFile:
       - values.yaml
       - ../application1.values.yaml
-    syncPolicy:
-      automated: {}
-      syncOptions:
-        - CreateNamespace=true
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true

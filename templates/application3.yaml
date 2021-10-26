@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: application3
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: application3
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: chart
+    repoURL: {{ .Values.spec.github.repository }}
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - values.yaml
+      - ../application3.values.yaml
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true

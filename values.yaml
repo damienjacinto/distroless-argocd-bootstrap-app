@@ -2,4 +2,4 @@ spec:
   destination: 
     server: https://kubernetes.default.svc
   github:
-    repository: git@github.com:damienjacinto/distroless-argocd-app.git   
+    repository: https://github.com/damienjacinto/distroless-argocd-app.git

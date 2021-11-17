@@ -5,6 +5,10 @@ metadata:
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd-image-updater.argoproj.io/write-back-method: argocd
+    argocd-image-updater.argoproj.io/image-list: application2=europe-central2-docker.pkg.dev/distroless-329216/distroless/application2:latest
+    argocd-image-updater.argoproj.io/application2.update-strategy: digest
 spec:
   destination:
     namespace: application2

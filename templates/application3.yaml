@@ -8,7 +8,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: argocd
     argocd-image-updater.argoproj.io/image-list: application3=europe-central2-docker.pkg.dev/distroless-329216/distroless/application3:latest
-    argocd-image-updater.argoproj.io/application2.update-strategy: digest
+    argocd-image-updater.argoproj.io/application3.update-strategy: digest
 spec:
   destination:
     namespace: application3
